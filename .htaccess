@@ -3,5 +3,5 @@
 # mdファイルのアクセスのみを./mdparser/main.phpに飛ばすようにしている
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteRule ^(.+\.md)$ mdparser/main.php?file_name=$1 [L]
+RewriteRule ^(.+\.md)$ webmdparser/main.php?file_name=$1 [L]
 </IfModule>
