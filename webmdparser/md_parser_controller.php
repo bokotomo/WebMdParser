@@ -10,8 +10,10 @@ class MdParserController
   }
 
   public function echoMdText(){
+    echo file_get_contents("header.txt");
     $mdText = $this->parseMdText($this->textArray);
     echo $mdText;
+    echo file_get_contents("footer.txt");
   }
 
   private function parseMdText($textArray){
@@ -22,10 +24,10 @@ class MdParserController
         $convertedText .= "<br>";
       }else if($textArray[$i] == "#"){
         if($i==0){
-          $convertedText .= "<h1>";
+          $convertedText .= "<div class='title1'>";
           for($j = $i + 1;$j<$textMaxNum;$j++){
             if($textArray[$j] == "\n"){
-              $convertedText .= "</h2>";
+              $convertedText .= "</div>";
               $i = $j;
               break;
             }else{
@@ -34,10 +36,10 @@ class MdParserController
           }
         }else{
           if($textArray[$i - 1] == "\n"){
-            $convertedText .= "<h1>";
+            $convertedText .= "<div class='title1'>";
             for($j = $i + 1;$j<$textMaxNum;$j++){
               if($textArray[$j] == "\n"){
-                $convertedText .= "</h2>";
+                $convertedText .= "</div>";
                 $i = $j;
                 break;
               }else{
