@@ -2,7 +2,7 @@
 URLに.mdファイルを指定しても整形された状態で見れます。
 
 # sampleimage
-<img src="https://tomo.syo.tokyo/openimg/mdparserimg.png" width="340px">
+<img src="https://tomo.syo.tokyo/openimg/webmdparserimg.png" width="340px">
 
 # Getting started
 mdparserフォルダ  
@@ -11,8 +11,8 @@ mdparserフォルダ
 すでに.htaccessファイルがある場合はこのコードの足りない部分を付け足します。  
 <pre><code>&lt;IfModule mod_rewrite.c&gt;  
 RewriteEngine On  
-RewriteRule ^(.+\.md)$ mdparser/main.php?file_name=$1 [L]  
+RewriteRule ^(.+\.md)$ webmdparser/main.php?file_name=$1 [L]  
 &lt;/IfModule&gt;</code></pre> 
 
 # .htaccessの説明
-.mdの拡張子をつくアクセスを全てmdparser/main.phpに飛ばしています。
+.mdの拡張子をつくアクセスを全てwebmdparser/main.phpに飛ばしています。
