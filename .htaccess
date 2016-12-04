@@ -1,0 +1,7 @@
+# mod_rewriteはURL書き換えエンジン
+# RewriteRule パターンに合致した文字列を置換対象に書き換える。
+# mdファイルのアクセスのみを./mdparser/main.phpに飛ばすようにしている
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(.+\.md)$ mdparser/main.php?file_name=$1 [L]
+</IfModule>
