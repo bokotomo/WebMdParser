@@ -76,6 +76,21 @@ class MdParserController
       }else if($textArray[$i] == " " && $textArray[$i + 1] == " " && $textArray[$i + 2] == "\n"){
         $convertedText .= "<br>";
         $i += 2;
+      }else if($textArray[$i] == "<" && $textArray[$i + 1] == "i" && $textArray[$i + 2] == "m" && $textArray[$i + 3] == "g"){
+        $convertedText .= "<img";
+        for($j = $i + 4;$j<$textMaxNum;$j++){
+          if($textArray[$j] == "\n" || $textArray[$j] == ">"){
+            $convertedText .= ">";
+            $i = $j;
+            break;
+          }else if($j == $textMaxNum - 1){
+            $convertedText .= $textArray[$j];
+            $i = $j;
+            break;
+          }else{
+            $convertedText .= $textArray[$j];
+          }
+        }
       }else if($textArray[$i] == "h" && $textArray[$i + 1] == "t" && $textArray[$i + 2] == "t" && $textArray[$i + 3] == "p"){
         $urlText = "";
         for($j = $i + 4;$j<$textMaxNum;$j++){
