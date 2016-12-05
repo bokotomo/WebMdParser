@@ -3,7 +3,7 @@ URLに.mdファイルを指定しても整形された状態で見れます。
 通常だと.txtファイルとして表示されてしまい誰かに.mdファイル形式で共有できません。  
 WebMdParserをディレクトリに入れれば、サーバにmdファイルを貼って誰かに内容共有ができます。  
 
-<img src="https://tomo.syo.tokyo/openimg/webmdparserimg2.png" width="400px">  
+<img src="https://tomo.syo.tokyo/openimg/webmdparserimg2.png" width="480px">  
 
 # DEMO
 https://tomo.syo.tokyo/memo/text.md
@@ -22,5 +22,5 @@ RewriteRule ^(.+\.md)$ webmdparser/run.php?file_name=$1 [L]
 .mdの拡張子をつくアクセスを全てwebmdparser/run.phpに飛ばしています。
 
 # Using
-PHP
-.htaccess
+PHP  
+.htaccess  

@@ -34,6 +34,9 @@ class MdParserController
     for($i = 0;$i<$textMaxNum;$i++){
       if($textArray[$i] == "\n"){
         $convertedText .= "<br>";
+      }else if($textArray[$i] == " " && $textArray[$i + 1] == " " && $textArray[$i + 2] == "\n"){
+        $convertedText .= "<br>";
+        $i += 2;
       }else if($textArray[$i] == "h" && $textArray[$i + 1] == "t" && $textArray[$i + 2] == "t" && $textArray[$i + 3] == "p"){
         $urlText = "";
         for($j = $i + 4;$j<$textMaxNum;$j++){
