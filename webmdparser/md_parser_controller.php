@@ -1,4 +1,5 @@
 <?php
+
 namespace MdParser;
 
 use MdParser;
@@ -12,25 +13,32 @@ class MdParserController
 {
   /** @var array */
   private $textArray;
+  /** @var string */
+  private $fileName;
 
   /**
   * load mdfile from $mdPath
   * 
-  * @param string $mdPath mdfile path
+  * @param string $mdPath mdfile name
   */
-  public function __construct($mdPath){
-    $text = file_get_contents($mdPath);
+  public function __construct($fileName){
+    $filePath = __DIR__."/../".$fileName;
+    $text = file_get_contents($filePath);
     $this->textArray = preg_split("//u", $text, -1, PREG_SPLIT_NO_EMPTY);
+    $this->fileName = $fileName;
   }
 
   /**
   * show mdfile's text that is converted htmlfile
   */
   public function echoMdText(){
-    echo file_get_contents("header.txt");
+    $headerText = file_get_contents("header.txt");
+    $headerText = str_replace("HTML_TITLE", $this->fileName, $headerText);
+    $headerText = str_replace("CSS_PATH", "webmdparser/style.css", $headerText);
+    echo $headerText;
     $mdText = $this->parseMdText($this->textArray);
     echo $mdText;
-    echo file_get_contents("footer.txt");
+    echo file_get_contents("footer.txt");    
   }
 
   /**

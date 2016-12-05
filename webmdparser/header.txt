@@ -2,10 +2,10 @@
 <html lang="ja"> 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Title</title>
+<title>HTML_TITLE</title>
 <meta http-equiv="Content-Style-Type" content="text/css">
 <link href="" rel="shortcut icon" type="image/x-icon">
-<link rel='stylesheet' type='text/css' href='webmdparser/style.css'>
+<link rel='stylesheet' type='text/css' href='CSS_PATH'>
 </head>
 <body>
 <div id="page">

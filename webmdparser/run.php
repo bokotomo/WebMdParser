@@ -12,7 +12,7 @@ if(!empty($_GET["file_name"])){
 
 $filePath = __DIR__."/../".$fileName;
 if(file_exists($filePath)){
-  $mdParserController = new MdParserController($filePath);
+  $mdParserController = new MdParserController($fileName);
   $mdParserController->echoMdText();
 }else{
   header("HTTP/1.0 404 Not Found");
