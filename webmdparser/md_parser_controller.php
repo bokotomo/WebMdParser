@@ -3,14 +3,20 @@ namespace MdParser;
 
 use MdParser;
 
+/**
+ * .md file Parser API.
+ *
+ * @package MdParser
+ */
 class MdParserController
 {
+  /** @var array */
   private $textArray;
 
   /**
   * load mdfile from $mdPath
   * 
-  * @param string $mdPath. mdfile path
+  * @param string $mdPath mdfile path
   */
   public function __construct($mdPath){
     $text = file_get_contents($mdPath);
@@ -18,7 +24,7 @@ class MdParserController
   }
 
   /**
-  * echo mdfile text
+  * show mdfile's text that is converted htmlfile
   */
   public function echoMdText(){
     echo file_get_contents("header.txt");
@@ -28,7 +34,7 @@ class MdParserController
   }
 
   /**
-  * response Shape's Number
+  * response Number of Shape
   * 
   * @param array $textArray $index array that is mdfile's text
   * @param int $textMaxNum Number of array that is mdfile's text
