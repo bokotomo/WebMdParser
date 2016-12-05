@@ -1,10 +1,8 @@
 # WebMdParser
 URLに.mdファイルを指定しても整形された状態で見れます。  
-通常.txtファイルとして表示されてしまい誰かに.mdファイル形式で共有できません。  
+通常だと.txtファイルとして表示されてしまい誰かに.mdファイル形式で共有できません。  
 WebMdParserをディレクトリに入れれば、サーバにmdファイルを貼って誰かに内容共有ができます。  
-
-# sampleimage
-<img src="https://tomo.syo.tokyo/openimg/webmdparserimg2.png" width="340px">
+<img src="https://tomo.syo.tokyo/openimg/webmdparserimg2.png" width="340px">  
 
 # DEMO
 https://tomo.syo.tokyo/memo/text.md
