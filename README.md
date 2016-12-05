@@ -4,6 +4,7 @@ URLに.mdファイルを指定しても整形された状態で見れます。
 WebMdParserをディレクトリに入れれば、サーバにmdファイルを貼って誰かに内容共有ができます。  
 
 <img src="https://tomo.syo.tokyo/openimg/webmdparserimg2.png" width="480px">  
+<img src="https://tomo.syo.tokyo/openimg/webparsermdfile.gif" width="480px">  
 
 # DEMO
 https://tomo.syo.tokyo/memo/text.md
