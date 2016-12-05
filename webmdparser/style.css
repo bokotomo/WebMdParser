@@ -1,20 +1,19 @@
 @charset "utf-8";
 
-html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em,font,img,b,u,i,ol,ul,li,form,label,table,caption,tbody,tfoot,thead,tr,th,td{margin: 0;padding: 0;}
-img,div{border-width:0px;}
-a{text-decoration: none;color: #0e6cd0;}
+html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em,font,img,b,u,i,ol,ul,li,form,label,table,caption,tbody,tfoot,thead,tr,th,td{margin: 0; padding: 0;}
+img,div{border-width: 0px;}
+a{text-decoration: none; color: #0e6cd0;}
 img{vertical-align: bottom;}
 textarea {resize: none;}
 body {
-	font-family:  "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
 }
-
 #page{
-  padding:20px;
+  padding: 20px;
 }
 .title1{
   font-weight: bold;
-  font-size:2em;
+  font-size: 2em;
   color: #333;
   padding-bottom: 10px;
   margin-bottom: 10px;
@@ -22,7 +21,7 @@ body {
 }
 .title2{
   font-weight: bold;
-  font-size:1.5em;
+  font-size: 1.5em;
   color: #333;
   padding-bottom: 10px;
   margin-bottom: 10px;
@@ -30,7 +29,7 @@ body {
 }
 .title3{
   font-weight: bold;
-  font-size:1em;
+  font-size: 1em;
   color: #333;
   padding-bottom: 10px;
   margin-bottom: 10px;
@@ -38,7 +37,7 @@ body {
 }
 .title4{
   font-weight: bold;
-  font-size:1em;
+  font-size: 1em;
   color: #333;
   padding-bottom: 10px;
   margin-bottom: 10px;
