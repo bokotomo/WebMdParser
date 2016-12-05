@@ -1,14 +1,25 @@
 <?php
+namespace MdParser;
+
+use MdParser;
 
 class MdParserController
 {
   private $textArray;
 
+  /**
+  * load mdfile from $mdPath
+  * 
+  * @param string $mdPath. mdfile path
+  */
   public function __construct($mdPath){
     $text = file_get_contents($mdPath);
     $this->textArray = preg_split("//u", $text, -1, PREG_SPLIT_NO_EMPTY);
   }
 
+  /**
+  * echo mdfile text
+  */
   public function echoMdText(){
     echo file_get_contents("header.txt");
     $mdText = $this->parseMdText($this->textArray);
@@ -16,6 +27,14 @@ class MdParserController
     echo file_get_contents("footer.txt");
   }
 
+  /**
+  * response Shape's Number
+  * 
+  * @param array $textArray $index array that is mdfile's text
+  * @param int $textMaxNum Number of array that is mdfile's text
+  * @param int $index now index
+  * @return int Shape's Number
+  */
   private function getShapeNum($textArray, $textMaxNum, $index){
     $titleNum = 1;
     for($j = $index + 1;$j<$textMaxNum;$j++){
@@ -28,6 +47,12 @@ class MdParserController
     return $titleNum;
   }
 
+  /**
+  * parse htmltext from array
+  * 
+  * @param array $textArray. array that is mdfile's text
+  * @return string converted mdfile's text
+  */
   private function parseMdText($textArray){
     $convertedText = "";
     $textMaxNum = count($textArray);
@@ -61,7 +86,6 @@ class MdParserController
           $convertedText .= $textArray[$i];
         }
       }else if($textArray[$i] == "#"){
-        //h1
         $titleNum = $this->getShapeNum($textArray, $textMaxNum, $i);
         if($i==0){
           $convertedText .= "<div class='title{$titleNum}'>";
